@@ -42,13 +42,13 @@
     <Authors>HolisticWare, moljac</Authors>
     <Copyright>2020</Copyright>
     <ProjectUrl>
-        https://github.com/HolisticWare/HolisticWare.Core.Net
+        https://github.com/HolisticWare/HolisticWare.Core.IO
     </ProjectUrl>
     <PackageProjectUrl>
-        https://github.com/HolisticWare/HolisticWare.Core.Net
+        https://github.com/HolisticWare/HolisticWare.Core.IO
     </PackageProjectUrl>
     <RepositoryUrl>
-        https://github.com/HolisticWare/HolisticWare.Core.Net
+        https://github.com/HolisticWare/HolisticWare.Core.IO
     </RepositoryUrl>
     <iconUrl>
         https://secure.gravatar.com/avatar/b662959e712466f393541935b664d3c5
@@ -58,10 +58,10 @@
     </PackageIconUrl>
     <license>LICENSE</license>
     <licenseUrl>
-        https://github.com/HolisticWare/HolisticWare.Core.Net/blob/master/LICENSE
+        https://github.com/HolisticWare/HolisticWare.Core.IO/blob/master/LICENSE
     </licenseUrl>
     <PackageLicenseUrl>
-        https://github.com/HolisticWare/HolisticWare.Core.Net/blob/master/LICENSE
+        https://github.com/HolisticWare/HolisticWare.Core.IO/blob/master/LICENSE
     </PackageLicenseUrl>
     <VersionPrefix>0.0.1</VersionPrefix>
     <!--
