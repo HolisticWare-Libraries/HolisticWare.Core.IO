@@ -1,10 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+	<!--
+	https://apisof.net/
+	-->
 	<PropertyGroup>
-		<TargetFrameworks>netstandard1.0</TargetFrameworks>
-		<RootNamespace>Core.IO</RootNamespace>
-		<AssemblyName>HolisticWare.Core.IO</AssemblyName>
+		<TargetFrameworks>netstandard1.0;netstandard1.3,netstandard2.0</TargetFrameworks>
+	</PropertyGroup>
 
+	<PropertyGroup>
+		<AssemblyName>HolisticWare.Core.IO</AssemblyName>
+		<RootNamespace>Core.IO</RootNamespace>
 	</PropertyGroup>
 
 	<!--
@@ -23,6 +28,10 @@
 		<DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD1_0</DefineConstants>
 	</PropertyGroup>
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.0'">
+	  <PackageReference Include="System.AppContext" Version="4.3.0" />
+	  <PackageReference Include="System.Runtime.Extensions" Version="4.3.1" />
+	</ItemGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.0'">
 		<Compile Include=".\common-shared\**\*.cs" />
 		<Compile Include=".\netstandard1.0\**\*.cs" />
 	</ItemGroup>
@@ -31,4 +40,51 @@
 	===============================================================================================================
     -->
 
+	<!--
+	===============================================================================================================
+        .NET Standard 1.5 references, compilation flags and build options
+    -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5'">
+		<DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD1_5</DefineConstants>
+	</PropertyGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.5'">
+	  <PackageReference Include="System.AppContext" Version="4.3.0" />
+	  <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
+	  <PackageReference Include="System.Runtime.Extensions" Version="4.3.1" />
+	</ItemGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.5'">
+		<Compile Include=".\common-shared\**\*.cs" />
+		<Compile Include=".\netstandard1.0\**\*.cs" />
+		<Compile Include=".\netstandard1.3\**\*.cs" />
+	</ItemGroup>
+	<!--
+        .NET Standard 1.5 references, compilation flags and build options
+	===============================================================================================================
+    -->
+
+	<!--
+	===============================================================================================================
+        .NET Standard 2.0 references, compilation flags and build options
+    -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+		<DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2.0</DefineConstants>
+	</PropertyGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+	  <PackageReference Include="System.AppContext" Version="4.3.0" />
+	  <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
+	  <PackageReference Include="System.Runtime.Extensions" Version="4.3.1" />
+	</ItemGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+		<Compile Include=".\common-shared\**\*.cs" />
+		<Compile Include=".\netstandard1.0\**\*.cs" />
+		<Compile Include=".\netstandard1.3\**\*.cs" />
+	</ItemGroup>
+	<!--
+        .NET Standard 2.0 references, compilation flags and build options
+	===============================================================================================================
+    -->
+
+	<ItemGroup>
+	  <PackageReference Include="System.Runtime" Version="4.3.1" />
+	</ItemGroup>
 </Project>

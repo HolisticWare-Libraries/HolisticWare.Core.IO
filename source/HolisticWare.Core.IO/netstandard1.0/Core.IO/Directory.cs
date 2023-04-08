@@ -1,45 +1,45 @@
 ﻿namespace Core.IO
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text.RegularExpressions;
-
     /// <summary>
     /// Directory is FileSystemItem
     /// </summary>
     public partial class
-                                Directory
-                                :
-                                FileSystemItem
+                                        Directory
+                                        :
+                                        FileSystemItem
     {
 
         static
-                                Directory
-                                    (
-                                    )
+                                        Directory
+                                            (
+                                            )
         {
-            Current = new Dictionary<string, string>
+            Current = new System.Collections.Generic.Dictionary<string, string>
             {
-                {
-                    "System.Environment.CurrentDirectory",
-                    System.Environment.CurrentDirectory
-                },
-                {
-                    "System.AppContext.BaseDirectory",
-                    System.AppContext.BaseDirectory
-                },
-                {
-                    "AppDomain.CurrentDomain.BaseDirectory",
-                    System.AppDomain.CurrentDomain.BaseDirectory
-                },
+                #if NETSTANDARD1_3
                 {
                     "System.IO.Directory.GetCurrentDirectory()",
                     System.IO.Directory.GetCurrentDirectory()
                 },
                 {
+                    "System.AppContext.BaseDirectory",
+                    System.AppContext.BaseDirectory
+                },
+                #endif
+                #if NETSTANDARD1_3 || NETSTANDARD2_0
+                {
+                    "System.Environment.CurrentDirectory",
+                    System.Environment.CurrentDirectory
+                },
+                {
                     "typeof(Directory).Assembly.GetType().Assembly.Location",
                     typeof(Directory).Assembly.GetType().Assembly.Location
                 },
+                {
+                    "AppDomain.CurrentDomain.BaseDirectory",
+                    System.AppDomain.CurrentDomain.BaseDirectory
+                },
+                #endif
                 #if WINDOWS_FORMS
                 {
                     "",
@@ -49,22 +49,20 @@
                     "",
                     Application.StartupPath
                 },
-                # endif
+                #endif
             };
 
             return;
         }
 
-
         /// <summary>
         /// https://yetanotherchris.dev/csharp/6-ways-to-get-the-current-directory-in-csharp/
         /// </summary>
         public static
-            Dictionary<string, string>
+            System.Collections.Generic.Dictionary<string, string>
                                         Current
         {
             get;
-
             set;
         }
     }

@@ -6,6 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.IO", "HolisticWare.Core.IO\HolisticWare.Core.IO.csproj", "{AA716194-EE94-4D76-9139-044CBEB574BD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8995391D-E1DB-414C-89CD-19A8360A8195}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library-source", "library-source", "{53F1C104-15C2-4433-978F-57D19E7BB459}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
@@ -29,5 +31,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {440F697D-77CA-4EA5-9C13-585B4998A64A}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53F1C104-15C2-4433-978F-57D19E7BB459} = {8995391D-E1DB-414C-89CD-19A8360A8195}
+		{AA716194-EE94-4D76-9139-044CBEB574BD} = {53F1C104-15C2-4433-978F-57D19E7BB459}
 	EndGlobalSection
 EndGlobal
