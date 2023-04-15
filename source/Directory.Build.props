@@ -9,6 +9,15 @@
         -->
         <LangVersion>Latest</LangVersion>
         <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <!--
+        warning CS8632:
+        The annotation for nullable reference types should only be used in code within a '#nullable'
+        annotations context.
+        -->
+        <Nullable>enable</Nullable>
+        <!--
+        <WarningsAsErrors>CS8600;CS8602;CS8603</WarningsAsErrors>
+        -->
     </PropertyGroup>
 
     <PropertyGroup Condition="$(Configuration.Contains('Release'))">
@@ -27,7 +36,7 @@
         CS1572: XML comment has a param tag for 'Bar', but there is no parameter by that name
         CS1591: Missing XML comment for publicly visible type or member 'Foo'
     -->
-    <NoWarn>1570;1572;1591</NoWarn>
+    <NoWarn>$(NoWarn);1570;1572;1591</NoWarn>
 
     <!--
     The .snk has both private and public keys
