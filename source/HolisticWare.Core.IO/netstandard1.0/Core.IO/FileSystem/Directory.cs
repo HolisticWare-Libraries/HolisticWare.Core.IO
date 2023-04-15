@@ -1,12 +1,15 @@
-﻿namespace Core.IO
+﻿namespace Core.IO.FileSystems
 {
     /// <summary>
-    /// File is FileSystemItem
+    /// FileSystem Abstractions
+    /// Directory is FileSystemItem
     /// </summary>
     public partial class
-                                        File
+                                        Directory
                                         :
                                         FileSystemItem
     {
+
+
     }
 }

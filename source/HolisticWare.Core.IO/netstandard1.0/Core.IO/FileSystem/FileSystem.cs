@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace Core.IO
+﻿namespace Core.IO.FileSystems
 {
+    using System.Collections.Generic;
+
     /// <summary>
-    /// Directory
+    /// FileSystem Abstractions
+    /// FileSystem
     /// </summary>
     public partial class FileSystem
     {
