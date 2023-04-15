@@ -172,7 +172,7 @@ if( ! IsRunningOnWindows())
                                     "tree",
                                     new ProcessSettings
                                     {
-                                        Arguments = @"./output"
+                                        Arguments = @"-h ./output"
                                     }
                                 );
     }
