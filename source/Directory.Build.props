@@ -80,12 +80,6 @@
     <PackageLicenseUrl>
         https://github.com/HolisticWare/HolisticWare.Core.IO/blob/master/LICENSE
     </PackageLicenseUrl>
-    <VersionPrefix>0.0.1</VersionPrefix>
-    <!--
-    VersionSuffix - For debugging and local nuget feed
-    <VersionSuffix>alpha-$([System.DateTime]::Now.ToString('yyyyMMddHHmm'))</VersionSuffix>
-    -->
-    <PackageVersion>$(Version)</PackageVersion>
 
     <!--
     put the package output into a nuget test folder
