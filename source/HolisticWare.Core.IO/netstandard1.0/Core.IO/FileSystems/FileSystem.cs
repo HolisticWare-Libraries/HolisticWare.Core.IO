@@ -6,15 +6,20 @@
     /// FileSystem Abstractions
     /// FileSystem
     /// </summary>
-    public partial class FileSystem
+    public partial class
+                                        FileSystem
     {
-        public string Name
+        public
+            string
+                                        Name
         {
             get;
             set;
         }
 
-        public IEnumerable<FileSystemItem> FileSystemItems
+        public
+            IEnumerable<FileSystemItem>
+                                        FileSystemItems
         {
             get;
             set;
