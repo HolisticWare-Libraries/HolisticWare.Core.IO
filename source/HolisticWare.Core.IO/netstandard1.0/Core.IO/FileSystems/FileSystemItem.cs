@@ -1,14 +1,16 @@
 ﻿namespace Core.IO.FileSystems
 {
-    using System.Collections.Generic;
-
     /// <summary>
-    /// FileSystem Abstractions
-    /// Directory
+    /// FileSystemItem
+    /// Directory can contain Direcotries and Files
+    ///
     /// </summary>
-    public partial class FileSystemItem
+    public partial class
+                                        FileSystemItem
     {
-        public IEnumerable<FileSystemItem> FileSystemItems
+        public
+            string?
+                                        Name
         {
             get;
             set;

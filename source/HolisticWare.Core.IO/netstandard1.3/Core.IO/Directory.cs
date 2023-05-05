@@ -21,7 +21,7 @@ namespace Core.IO
         {
             Current = new System.Collections.Generic.Dictionary<string, string>
             {
-                #if NETSTANDARD1_3
+                // #if NETSTANDARD1_3
                 {
                     "System.IO.Directory.GetCurrentDirectory()",
                     System.IO.Directory.GetCurrentDirectory()
@@ -30,8 +30,8 @@ namespace Core.IO
                     "System.AppContext.BaseDirectory",
                     System.AppContext.BaseDirectory
                 },
-                #endif
-                #if NETSTANDARD2_0
+                // #endif
+                // #if NETSTANDARD2_0
                 {
                     "AppDomain.CurrentDomain.BaseDirectory",
                     System.AppDomain.CurrentDomain.BaseDirectory
@@ -44,7 +44,7 @@ namespace Core.IO
                     "typeof(Directory).Assembly.GetType().Assembly.Location",
                     typeof(Directory).Assembly.GetType().Assembly.Location
                 },
-                #endif
+                // #endif
                 #if WINDOWS_FORMS
                 {
                     "",

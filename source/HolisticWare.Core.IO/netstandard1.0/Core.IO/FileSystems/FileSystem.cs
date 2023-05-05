@@ -10,7 +10,7 @@
                                         FileSystem
     {
         public
-            string
+            string?
                                         Name
         {
             get;
@@ -18,7 +18,7 @@
         }
 
         public
-            IEnumerable<FileSystemItem>
+            IEnumerable<FileSystemItem>?
                                         FileSystemItems
         {
             get;
