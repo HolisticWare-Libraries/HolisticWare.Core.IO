@@ -93,7 +93,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\readme.md" Pack="true" PackagePath="\readme.md"/>
+    <None Include="..\..\readme.md" Pack="true" PackagePath="\README.md"/>
     <None Include="..\..\docs\media\HolisticWare.svg.128x128.png" Pack="true" PackagePath="\icon.png"/>
   </ItemGroup>
 
