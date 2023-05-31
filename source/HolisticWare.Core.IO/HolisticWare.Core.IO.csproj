@@ -22,4 +22,8 @@
 		<PackageVersion>$(Version)</PackageVersion>
 	</PropertyGroup>
 
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <CreatePackage>false</CreatePackage>
+    </PropertyGroup>
+
 </Project>
